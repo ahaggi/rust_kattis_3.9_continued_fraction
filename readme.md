@@ -56,4 +56,4 @@ Display the partial quotients of the continued fraction representations of r<sub
 
 </table>
 
-[img1]: .\img1.png
+[img1]: img1.png

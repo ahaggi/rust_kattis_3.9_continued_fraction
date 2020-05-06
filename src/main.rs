@@ -82,8 +82,15 @@ fn gen_continued_fraction((p, q): (i64, i64)) -> Vec<i64> {
                 p = q;
                 q = temp;
             }
+            
         }
         if negate {
+            // If we want to get a negated value from a positive continuedFraction, then we could either:
+            // - Negate everything: negate all its terms /partial quotients
+            //   or
+            // - Apply "short negation": http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/cfINTRO.html#section13.1.2
+            //   after appling "short negation", we could use 'collapse a zero' formula.
+
             if v.len() == 1 {
                 v[0] *= -1;
             } else {
